@@ -1,4 +1,4 @@
-const CSV_PATH = "../fightclub_matches.csv";
+const CSV_PATH = "fightclub_matches.csv";
 
 const statusEl = document.getElementById("status");
 const csvPathEl = document.getElementById("csvPath");

@@ -50,35 +50,8 @@ Dann im Browser:
 
 - `http://127.0.0.1:8080/fightclub-mini-web/`
 
-## Auf GitHub veroeffentlichen
 
-Im Ordner `fightclub-mini-web`:
 
-```powershell
-git init
-git add .
-git commit -m "Initial release: fightclub rangliste web app"
-git branch -M main
-git remote add origin https://github.com/uraicc/fightclub-rangliste.git
-git push -u origin main
-```
-
-Falls `origin` schon existiert:
-
-```powershell
-git remote set-url origin https://github.com/uraicc/fightclub-rangliste.git
-git push -u origin main
-```
-
-## GitHub Pages
-
-Auf GitHub im Repo:
-
-1. `Settings` -> `Pages`
-2. Source: `Deploy from a branch`
-3. Branch: `main`
-4. Folder: `/ (root)`
-
-Danach ist die Seite online unter:
+Webseite:
 
 - `https://uraicc.github.io/fightclub-rangliste/`
