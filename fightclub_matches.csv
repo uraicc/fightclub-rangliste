@@ -1,0 +1,7 @@
+datum,name1,name2,runden_name1,runden_name2,ergebnis
+2026-04-01,Shizzo,Axe Pulse,2,0,1
+2026-04-02,Rebel,Traube,2,0,1
+2026-04-03,Rebel,Axe Pulse,0,2,2
+2026-04-04,Traube,Shizzo,0,2,2
+2026-04-05,Shizzo,Rebel,2,0,1
+2026-04-06,Traube,Axe,1,1,X
