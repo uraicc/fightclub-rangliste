@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fightclub Battlerap Rangliste</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content container">
+      <p class="hero__kicker">Fightclub Battlerap</p>
+      <h1>Rangliste</h1>
+      <p class="hero__sub">Automatische Auswertung aus CSV-Daten</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Datenquelle</h2>
+      <p>
+        CSV-Datei: <code id="csvPath">../fightclub_matches.csv</code>
+      </p>
+      <p class="muted">
+        Format: datum, name1, name2, runden_name1, runden_name2, ergebnis
+      </p>
+      <div class="actions">
+        <button id="reloadBtn" type="button">CSV neu laden</button>
+      </div>
+      <p id="status" class="status"></p>
+    </section>
+
+    <section class="card">
+      <h2>Rangliste</h2>
+      <div class="table-wrap">
+        <table id="rankingTable">
+          <thead>
+            <tr>
+              <th>Rang</th>
+              <th>Name</th>
+              <th>Spiele</th>
+              <th>Siege</th>
+              <th>Unentschieden</th>
+              <th>Niederlagen</th>
+              <th>Punkte</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Alle Battles</h2>
+      <div class="table-wrap">
+        <table id="matchesTable">
+          <thead>
+            <tr>
+              <th>Datum</th>
+              <th>Name 1</th>
+              <th>Name 2</th>
+              <th>Runden Name 1</th>
+              <th>Runden Name 2</th>
+              <th>Ergebnis</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

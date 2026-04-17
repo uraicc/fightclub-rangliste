@@ -1,0 +1,157 @@
+:root {
+  --bg: #060606;
+  --panel: #111111;
+  --panel-soft: #181818;
+  --text: #f4f4f4;
+  --muted: #b9b9b9;
+  --accent: #e10600;
+  --accent-2: #ffd166;
+  --line: #2a2a2a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: radial-gradient(circle at top, #161616 0%, var(--bg) 38%);
+  color: var(--text);
+}
+
+.container {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.hero {
+  position: relative;
+  min-height: 240px;
+  border-bottom: 1px solid #202020;
+  background: linear-gradient(130deg, #0f0f0f 0%, #1b0a0a 45%, #0a0a0a 100%);
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(transparent, rgba(0, 0, 0, 0.7)),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 37px,
+      rgba(255, 255, 255, 0.02) 38px,
+      transparent 39px
+    );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  padding: 2.2rem 0 2.6rem;
+}
+
+.hero__kicker {
+  margin: 0;
+  color: var(--accent-2);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+}
+
+h1 {
+  margin: 0.4rem 0 0.2rem;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.1;
+}
+
+.hero__sub {
+  margin: 0;
+  color: var(--muted);
+}
+
+main {
+  padding: 1.2rem 0 1.8rem;
+}
+
+.card {
+  background: linear-gradient(180deg, var(--panel-soft), var(--panel));
+  border: 1px solid #242424;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 0 0 1rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.1rem;
+}
+
+.muted {
+  color: var(--muted);
+  margin: 0.35rem 0 0.8rem;
+}
+
+.actions {
+  margin: 0.8rem 0;
+}
+
+button {
+  border: 1px solid #7b0f0b;
+  background: linear-gradient(180deg, #dd180f, #aa0f09);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.55rem 0.9rem;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.07);
+}
+
+.status {
+  margin: 0.5rem 0 0;
+  color: var(--accent-2);
+  font-size: 0.95rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  padding: 0.55rem 0.5rem;
+}
+
+th {
+  background: #1f1f1f;
+  color: #f7f7f7;
+  font-size: 0.9rem;
+}
+
+tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+td strong {
+  color: var(--accent-2);
+}
+
+code {
+  background: #0e0e0e;
+  border: 1px solid #232323;
+  border-radius: 6px;
+  padding: 0.15rem 0.4rem;
+}
