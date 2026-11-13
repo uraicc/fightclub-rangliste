@@ -55,3 +55,36 @@ Dann im Browser:
 Webseite:
 
 - `https://uraicc.github.io/fightclub-rangliste/`
+
+## kie.ai API (Video / Fightclub-Memes)
+
+Server-seitige Anbindung an [kie.ai](https://docs.kie.ai/market/quickstart) für Video-Generierung (z. B. Chattygerüste-Szene).
+
+### Setup
+
+1. API-Key unter kie.ai anlegen
+2. Secret `KIE_API_KEY` in Cursor (App-/Environment-Secrets) setzen — **nicht** in den Chat posten und nicht committen
+3. Optional lokal: `.env.example` → `.env` kopieren und Key eintragen
+
+### Nutzung
+
+```bash
+# Payload prüfen (ohne API-Call)
+npm run kie:dry-run
+
+# Credits
+KIE_API_KEY=… npm run kie:credits
+
+# Video mit bis zu 10 Character-Refs (Wan 3.0)
+KIE_API_KEY=… node kie/generate-video.mjs --wait \
+  --model wan/3-0-video \
+  --refs "https://…/traube.png,https://…/fickbert.png,…"
+```
+
+Referenz-Reihenfolge für Chattygerüste: Traubensaft → Fickbert → Ghost → Smio → Axepulse → Rebel → Shizzo → D'n Dave.
+
+Hinweise:
+
+- Der Key darf **nie** in Client-JS der GitHub-Pages-Rangliste landen
+- Veo `REFERENCE_2_VIDEO` max. 3 Bilder; Wan `reference_image_urls` bis 10
+- Docs: https://docs.kie.ai/market/quickstart

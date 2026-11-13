@@ -1,0 +1,10 @@
+{
+  "name": "fightclub-rangliste",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "kie:credits": "node kie/generate-video.mjs --credits",
+    "kie:dry-run": "node kie/generate-video.mjs --dry-run",
+    "kie:generate": "node kie/generate-video.mjs --wait"
+  }
+}
